@@ -1,3 +1,3 @@
 # Hale_CSCI2270
 
-This project will expand on the binary search tree structure of the movie exercise.
+The goal of this project is to model a basic course scheduling program. Rather than scouring multiple webpages and sites to attain basic information for what classes to take and when, one would be able to find this information in one place. Additionally it would account for where a class would fit into a desired degree plan, if at all. Available classes, with their times, professors, and descriptions will be stored using two or more data structures which will then be located via traversal algorithms based on the desired search method. The class schedule will also be composed using a more appropriate data structure covered in this semester.
