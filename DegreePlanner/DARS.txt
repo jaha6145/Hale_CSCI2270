@@ -1,0 +1,41 @@
+Boulder Campus Hours,Overall Semester Credit Hour Requirements,45
+Upper-Division Hours,Overall Semester Credit Hour Requirements,45
+Upper-Division Arts&Sciences,Overall Semester Credit Hour Requirements,30
+A&S Coursework,Overall Semester Credit Hour Requirements,90
+HS English,MAPS Requirements,4
+HS Mathematics,MAPS Requirements,4
+HS Natural Science,MAPS Requirements,3
+Requirement,Section,Hours
+
+HS Social Science,MAPS Requirements,2
+HS Foreign Language,Core-Skills Acquisition,4
+HS Quantative Reasoning and Mathmatic Skills (QRMS),Core-Skills Acquisition,3
+Written Communication Lower Division,Core-Skills Acquisition,3
+Written Communicaiton Upper Division,Core-Skills Acquisition,3
+Historical Context,Core-Content Areas of Study,3
+Human Diversity,Core-Content Areas of Study,3
+United States Context,Core-Content Areas of Study,3
+Literature and the Arts Lower Division,Core-Content Areas of Study,3
+Literature and the Arts Upper Division,Core-Content Areas of Study,3
+Contemorary Societies,Core-Content Areas of Study,3
+Ideas and Values,Core-Content Areas of Study,3
+Natural Science Sequence 1,Core-Content Areas of Study,3
+Natural Science Sequence 2,Core-Content Areas of Study,3
+Natural Science Lab,Core-Content Areas of Study,1
+Additional Natural Science Courses,Core-Content Areas of Study,13
+Outside CSCI Department, Outside Study Requirement,75
+Starting Computing,Computer Science Major Requirement,4
+Data Structures,Computer Science Major Requirement,4
+Computer Systems,Computer Science Major Requirement,4
+Discrete Mathematics,Computer Science Major Requirement,4
+Discrete Structures,Computer Science Major Requirement,4
+Four CSCI Core Classes,Computer Science Major Requirement,16
+Calculus I,Computer Science Math Requirement,4
+Calculus II,Computer Science Math Requirement,4
+Linear Algebra/ Probability/ Statistics,Computer Science Math Requirement,4
+CSCI Upper-Division,Computer Science Major Requirement,18
+Boulder Campus CSCI Upper-Division Hours,Computer Science Major Requirement,12
+TOTAL CSCI Hours,Computer Science Major Requirement,18
+
+
+
