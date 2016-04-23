@@ -1,0 +1,49 @@
+Course,_Credit_Hours,Department,_Number,_Satisfies,Prereq/Coreq
+
+Starting_Computing,4,CSCI,1300,Starting_Computing,Calculus_I
+Data_Structures,4,CSCI,2270,Data_Structures,Starting_Computing
+Computer_Systems,4,CSCI,_2400,Computer_Systems,Data_Structures
+Discrete_Structures,3,CSCI,2824,Discrete_Mathematics,Data_Structures
+Discrete_Mathematics,3,MATH,2001,Discrete_Mathematics,Calculus_I
+Discrete_Applied_Mathematics,3,APPM,3170,Discrete_Mathematics,_Calculus_III
+Calculus_I,4,Math,1300,_Calculus_I,_none
+Calculus_I_for_Engineers,4,APPM,1350,_Calculus_I,_none
+Calculus_II_for_Engineers,4,APPM,1360,_Calculus_II,_Calculus_I
+Calculus_II,5,Math,2300,_Calculus_II,_Calculus_I
+Linear_Algebra_with_CS_Applications,CSCI,2820,Linear_Algebra/Probability/Statistics,Calculus_II
+Introduction_to_Linear_Algebra,MATH,_3130,Linear_Algebra/Probability/Statistics,Calculus_II
+Matrix_Methods_and_Applications,3,APPM,3310,Linear_Algebra/Probability/Statistics,Calculus_III
+
+Introduction_to_Probability_and_Statistics,3,MATH,3510,Linear_Algebra/Probability/Statistics,Calculus_II
+Introduction_to_Probability_Theory,3,MATH,4510,Linear_Algebra/Probability/Statistics,Calculus_III
+Applied_Probability,3,APPM,3570,Linear_Algebra/Probability/Statistics,Calculus_III
+Statistical_Methods,3,APPM,4570,Linear_Algebra/Probability/Statistics,Calculus_II
+Introduction_to_Statistics_with_Computer_Applications,4,ECON,3818,Linear_Algebra/Probability/Statistics,#22
+Software_Development_Methods_and_Tools,3,CSCI,3308,Four_CSCI_Core_Classes,Data_Structures
+Principles_of_Programming_Languages,4,CSCI,3155,Four_CSCI_Core_Classes,Discrete_Mathematics
+Algorithms,4,CSCI,3104,	Four_CSCI_Core_Classes,Discrete_Mathematics
+Introduction_to_Artificial_Intelligence,3,CSCI,3202,Four_CSCI_Core_Classes,Linear_Algebra/Probability/Statistics
+HCC_Foundations/User-Centered_Design_and_Development_1,3,CSCI,3002,Four_CSCI_Core_Classes,#27
+Operating_Systems,4,CSCI,3753,Four_CSCI_Core_Classes,Computer_Systems
+Object-Oriented_Analysis_and_Design,3,CSCI,4448,Four_CSCI_Core_Classes,Principles_of_Programming_Languages
+Therory_of_Computation,3,CSCI,3434,Four_CSCI_Core_Classes,Principles_of_Programming_Languages
+Database_and_Information_Systems,3,CSCI,3287,Four_CSCI_Core_Classes,Algorithms
+Numerical_Computation,3,CSCI,3656,Four_CSCI_Core_Classes,Linear_Algebra/Probability/Statistics
+
+
+
+STILL_NEED_TO_INCORPORATE:
+Boulder_Campus_CSCI_Upper-Division_Hours
+	-additional_CSCI_courses
+MAPS_reqs
+CORE_reqs
+A&S_reqs
+
+
+
+
+
+NOTEs:_	:Overall_hours,_campus_hours,_upper_division_A&S,_A&S_coursework_and_other_overall_hours_will_be_calculated_in_program
+		-while_'satisfies'_sections_will_be_directly_applied_to_individual_structs
+	:PREREQUISITES:_if_starts_with_#,_this_denotes_a_minimum_number_of_credit_hours
+	:PRERQUESITES:_are_incomplete_due_to_the_scope_of_the_project

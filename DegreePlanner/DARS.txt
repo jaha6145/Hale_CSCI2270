@@ -1,41 +1,38 @@
-Boulder Campus Hours,Overall Semester Credit Hour Requirements,45
-Upper-Division Hours,Overall Semester Credit Hour Requirements,45
-Upper-Division Arts&Sciences,Overall Semester Credit Hour Requirements,30
-A&S Coursework,Overall Semester Credit Hour Requirements,90
-HS English,MAPS Requirements,4
-HS Mathematics,MAPS Requirements,4
-HS Natural Science,MAPS Requirements,3
-Requirement,Section,Hours
-
-HS Social Science,MAPS Requirements,2
-HS Foreign Language,Core-Skills Acquisition,4
-HS Quantative Reasoning and Mathmatic Skills (QRMS),Core-Skills Acquisition,3
-Written Communication Lower Division,Core-Skills Acquisition,3
-Written Communicaiton Upper Division,Core-Skills Acquisition,3
-Historical Context,Core-Content Areas of Study,3
-Human Diversity,Core-Content Areas of Study,3
-United States Context,Core-Content Areas of Study,3
-Literature and the Arts Lower Division,Core-Content Areas of Study,3
-Literature and the Arts Upper Division,Core-Content Areas of Study,3
-Contemorary Societies,Core-Content Areas of Study,3
-Ideas and Values,Core-Content Areas of Study,3
-Natural Science Sequence 1,Core-Content Areas of Study,3
-Natural Science Sequence 2,Core-Content Areas of Study,3
-Natural Science Lab,Core-Content Areas of Study,1
-Additional Natural Science Courses,Core-Content Areas of Study,13
-Outside CSCI Department, Outside Study Requirement,75
-Starting Computing,Computer Science Major Requirement,4
-Data Structures,Computer Science Major Requirement,4
-Computer Systems,Computer Science Major Requirement,4
-Discrete Mathematics,Computer Science Major Requirement,4
-Discrete Structures,Computer Science Major Requirement,4
-Four CSCI Core Classes,Computer Science Major Requirement,16
-Calculus I,Computer Science Math Requirement,4
-Calculus II,Computer Science Math Requirement,4
-Linear Algebra/ Probability/ Statistics,Computer Science Math Requirement,4
-CSCI Upper-Division,Computer Science Major Requirement,18
-Boulder Campus CSCI Upper-Division Hours,Computer Science Major Requirement,12
-TOTAL CSCI Hours,Computer Science Major Requirement,18
+Boulder_Campus_Hours,Overall_Semester_Credit_Hour_Requirements,45
+Upper-Division_Hours,Overall_Semester_Credit_Hour_Requirements,45
+Upper-Division_Arts&Sciences,Overall_Semester_Credit_Hour_Requirements,30
+A&S_Coursework,Overall_Semester_Credit_Hour_Requirements,90
+HS_English,MAPS_Requirements,4
+HS_Mathematics,MAPS_Requirements,4
+HS_Natural_Science,MAPS_Requirements,3
+HS_Social_Science,MAPS_Requirements,2
+HS_Foreign_Language,Core-Skills_Acquisition,4
+HS_Quantative_Reasoning_and_Mathmatic_Skills_(QRMS),Core-Skills_Acquisition,3
+Written_Communication_Lower_Division,Core-Skills_Acquisition,3
+Written_Communicaiton_Upper_Division,Core-Skills_Acquisition,3
+Historical_Context,Core-Content_Areas_of_Study,3
+Human_Diversity,Core-Content_Areas_of_Study,3
+United_States_Context,Core-Content_Areas_of_Study,3
+Literature_and_the_Arts_Lower_Division,Core-Content_Areas_of_Study,3
+Literature_and_the_Arts_Upper_Division,Core-Content_Areas_of_Study,3
+Contemorary_Societies,Core-Content_Areas_of_Study,3
+Ideas_and_Values,Core-Content_Areas_of_Study,3
+Natural_Science_Sequence_1,Core-Content_Areas_of_Study,3
+Natural_Science_Sequence_2,Core-Content_Areas_of_Study,3
+Natural_Science_Lab,Core-Content_Areas_of_Study,1
+Additional_Natural_Science_Courses,Core-Content_Areas_of_Study,13
+Outside_CSCI_Department,_Outside_Study_Requirement,75
+Starting_Computing,Computer_Science_Major_Requirement,4
+Data_Structures,Computer_Science_Major_Requirement,4
+Computer_Systems,Computer_Science_Major_Requirement,4
+Discrete_Mathematics,Computer_Science_Major_Requirement,4
+Four_CSCI_Core_Classes,Computer_Science_Major_Requirement,16
+Calculus_I,Computer_Science_Math_Requirement,4
+Calculus_II,Computer_Science_Math_Requirement,4
+Linear_Algebra/Probability/Statistics,Computer_Science_Math_Requirement,4
+CSCI_Upper-Division,Computer_Science_Major_Requirement,18
+Boulder_Campus_CSCI_Upper-Division_Hours,Computer_Science_Major_Requirement,12
+TOTAL_CSCI_Hours,Computer_Science_Major_Requirement,18
 
 
 
