@@ -16,7 +16,7 @@ cout << "2. Search Class By Number" << endl;
 cout << "3. Enroll in a Class" << endl;
 cout << "4. Print Classes By Name" << endl;
 cout << "5. Print Classes By Number" << endl;
-cout << "6. Delete a Class" << endl;
+cout << "6. Drop Class" << endl;
 cout << "7. View Schedule" << endl;
 cout << "8. Simulate Semester" << endl;
 cout << "9. Print Transcript" << endl;
