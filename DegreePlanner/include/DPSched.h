@@ -3,14 +3,15 @@
 #include<string>
 #include<queue>
 #include<cstdlib>
+#include<vector>
 
 using namespace std;
 
 struct ClassNode{
-    std::string title;//same
-    int credits;//int ranking;
-    std::string department;//int year;
-    int courseNum;//int quantity;
+    std::string title;
+    int credits;
+    std::string department;
+    int courseNum;
     std::string satisfiesTitle;
     std::string preReqTitle;
     int seats;
@@ -39,27 +40,28 @@ class ClassTree
         ClassTree();
         ~ClassTree();
         void printClassInventory();
-        int countClassNodes();
         void deleteClassNode(std::string title);
         void addClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats);
         void numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats);
         void findClass(std::string title);
         void findClassByNumber(int courseNum);
         void takeClass(std::string title);
+        void addToCart(std::string title);
+        void printCart();
+        void printTranscript();
+        void deleteFromCart(std::string title);
+        void simSemester();
 
-        vector<ClassNode> transcript();
-        vector<ClassNode> classCart();
-        int creditCount();
-        int degreeProgress();
 
 
     protected:
 
     private:
         void DeleteAll(ClassNode * node); //use this for the post-order traversal deletion of the tree
-        void printClassInventory(ClassNode * node);
-        void countClassNodes(ClassNode *node, int *c);
+        void printClassInventory(ClassNode *node);
         string matchNum2Title(ClassNode *node, int in_num);
+        std::vector<ClassNode*> transcript ={};
+        std::vector<ClassNode*> classCart = {};
         ClassNode* searchByNum(int courseNum);
         ClassNode* search(std::string title);
         ClassNode* treeMinimum(ClassNode *node);

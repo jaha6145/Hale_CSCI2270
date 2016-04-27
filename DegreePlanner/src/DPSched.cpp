@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 using namespace std;
 
@@ -84,8 +85,6 @@ void ClassTree::numAddClassNode(std::string title, int hours, std::string dept, 
 
 }
 
-
-
 ClassNode* ClassTree::search(std::string title)
 {
     ClassNode *currentRoot = root;
@@ -166,6 +165,12 @@ void ClassTree::findClassByNumber(int courseNum)
     }
 }
 
+void ClassTree::addToCart(std::string title)
+{
+    ClassNode *addNode = search(title);
+    classCart.push_back(addNode);
+}
+
 void ClassTree::takeClass(string title)
 {
     ClassNode *foundClass = search(title);
@@ -182,9 +187,9 @@ void ClassTree::takeClass(string title)
         if (foundClass->seats!=0)
         {
             foundClass->seats = foundClass->seats-1;
+            addToCart(title);
 
-            cout << "Class has been added to schedule." << endl;
-            cout << "Class Info:" << endl;
+            cout << "The following class has been added to your transcript: " << endl;
             cout << "===========" << endl;
             cout << "Title:" << foundClass->title << endl;
             cout << "Course ID:" << foundClass->department<<" "<<foundClass->courseNum<< endl;
@@ -192,6 +197,52 @@ void ClassTree::takeClass(string title)
             cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
             cout << "PreRequisite:"<<foundClass->preReqTitle<<endl;
         }
+    }
+}
+void ClassTree::printCart()
+{
+    if (classCart.size() == 0)
+    {
+        cout<<"Your Cart is Empty"<<endl;
+    }
+    else
+    {
+        for (int i =0; i < classCart.size(); i++)
+        {
+            ClassNode *node =classCart[i];
+            cout<<i+1<<". "<<node->department<<" "<<node->courseNum<<": "<<node->title<<": "<<node->credits<<" Hrs; "<<node->seats<<" seats remaining"<<endl;
+        }
+    }
+}
+
+void ClassTree::printTranscript()
+{
+    if (transcript.size() == 0)
+    {
+        cout<<"You Have 0 Credits, Freshman"<<endl;
+    }
+    else
+    {
+        for (int i =0; i < transcript.size(); i++)
+        {
+            ClassNode *node =transcript[i];
+            cout<<i+1<<". "<<node->department<<" "<<node->courseNum<<": "<<node->title<<": "<<node->credits<<" Hrs; "<<node->seats<<" seats remaining"<<endl;
+        }
+    }
+}
+
+void ClassTree::simSemester()
+{
+    while (!classCart.empty())
+    {
+
+        transcript.push_back(classCart[0]);
+        cout<<classCart[0]->title<<" has been deleted from cart"<<endl;
+        classCart.erase(classCart.begin());
+    }
+    for (int i = 0; i<transcript.size(); i++)
+    {
+        cout<<transcript[i]->title<<" has been added to transcript"<<endl;
     }
 }
 
@@ -212,8 +263,6 @@ void ClassTree::printClassInventory()
 {
     ClassTree::printClassInventory(root);
 }
-
-
 
 ClassNode* ClassTree::treeMinimum(ClassNode *node)
 {
@@ -329,30 +378,6 @@ void ClassTree::deleteClassNode(std::string title)
     }
 }
 
-void ClassTree::countClassNodes(ClassNode *node, int *c)
-{
-
-        if (node->leftChild != NULL)
-        {
-            *c = *c +1;
-            countClassNodes (node->leftChild, c);
-        }
-        if (node->rightChild != NULL)
-        {
-            *c = *c+1;
-            countClassNodes (node->rightChild, c);
-        }
-}
-
-
-int ClassTree::countClassNodes()
-{
-
-    int *countInt = new int;
-    ClassTree::countClassNodes(root, countInt);
-    return *countInt;
-}
-
 void ClassTree::DeleteAll(ClassNode *node)
 {
     if (node->leftChild != NULL)
@@ -367,13 +392,18 @@ void ClassTree::DeleteAll(ClassNode *node)
     delete node;
 }
 
-
-
-
-
-
-
-
+void ClassTree::deleteFromCart(std::string title)
+{
+    for (int i =0; i < classCart.size(); i++)
+    {
+        ClassNode *node =classCart[i];
+        if (node->title == title)
+        {
+            classCart.erase(classCart.begin()+i);
+            break;
+        }
+    }
+}
 
 ClassTree::~ClassTree()
 {

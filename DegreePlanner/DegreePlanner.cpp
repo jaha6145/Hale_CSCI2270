@@ -13,12 +13,14 @@ int menu(){
 cout << "======Main Menu======" << endl;
 cout << "1. Search Class By Name" << endl;
 cout << "2. Search Class By Number" << endl;
-cout << "3. Take a class" << endl;
+cout << "3. Enroll in a Class" << endl;
 cout << "4. Print Classes By Name" << endl;
 cout << "5. Print Classes By Number" << endl;
-cout << "6. Delete a class" << endl;
-cout << "7. Count the classes" << endl;
-cout << "8. Quit" << endl;
+cout << "6. Delete a Class" << endl;
+cout << "7. View Cart" << endl;
+cout << "8. Simulate Semester" << endl;
+cout << "9. Print Transcript" << endl;
+cout << "10. Quit" << endl;
 
 
 }
@@ -77,7 +79,7 @@ int main(/*int argc, char*argv[]*/)
     menu();
     int userInput;
     cin>>userInput;
-    while(userInput!=8){
+    while(userInput!=10){
         cin.ignore();
         if(userInput==1){
             cout << "Enter course title:" << endl;
@@ -107,11 +109,16 @@ int main(/*int argc, char*argv[]*/)
             cout << "Enter title:" << endl;
             string deleteTitleIn;
             getline(cin,deleteTitleIn);
-            tree.deleteClassNode(deleteTitleIn);
+            tree.deleteFromCart(deleteTitleIn);
         }
-        else if (userInput==7){
-            cout<<"Tree contains: "<<tree.countClassNodes()<<" classes."<< endl;
-
+         else if (userInput==7){
+            tree.printCart();
+        }
+        else if (userInput==8){
+            tree.simSemester();
+        }
+        else if (userInput==9){
+            tree.printTranscript();
         }
         menu();
         cin>>userInput;
