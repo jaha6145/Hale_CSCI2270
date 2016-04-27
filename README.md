@@ -3,7 +3,7 @@
 Project Summary:  
 This Degree Planner program allows one to simulate a degree plan for a set of core classes in the A&S Computer Science curriculum. It takes into account one prequisite per class if any exist and simulates completing classes in a fashion dictated by prerequisites. If prequisites are met and do  not exist, then one can add that course to their cart/ "schedule". He or she can then simulate a semester which moves these classes from the schedule to a transcript where they can be evaluated as complete prerequisites for adding subsequent classes. Printing and searching catalog by name or course number is available at anytime as well as printing the current schedule and transcript. A class may also be deleted from a schedule when one exists within it. Upon closing of the program, all nodes in the catalogs are deleted.
 
-How to Run: 
+How to Run:   
 To run, download .zip from GitHub and extract DegreePlanner folder. Open cbp file with codeBlocks. Click Build and Run Program button.
 
 Dependencies:   
