@@ -17,7 +17,7 @@ cout << "3. Enroll in a Class" << endl;
 cout << "4. Print Classes By Name" << endl;
 cout << "5. Print Classes By Number" << endl;
 cout << "6. Delete a Class" << endl;
-cout << "7. View Cart" << endl;
+cout << "7. View Schedule" << endl;
 cout << "8. Simulate Semester" << endl;
 cout << "9. Print Transcript" << endl;
 cout << "10. Quit" << endl;
@@ -65,14 +65,15 @@ int main(/*int argc, char*argv[]*/)
                     getlCounter++;
                     //cout<<yr<<" ";
                 }
-                else {
+                else if (getlCounter==5){
                     prqTitle = word;
                     //cout<< qty << endl;
-                    getlCounter=0;
+                    getlCounter++;
                 }
+                else getlCounter=0;
             }
             int randSeats = rand() % 25;
-            tree.addClassNode(classTitle, creditHr, deptTitle, numCourse, satTitle, prqTitle,randSeats);
+            tree.addClassNode(classTitle, creditHr, deptTitle, numCourse, satTitle, prqTitle, randSeats);
             numTree.numAddClassNode(classTitle, creditHr, deptTitle, numCourse, satTitle, prqTitle, randSeats);
         }
     }

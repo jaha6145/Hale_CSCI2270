@@ -41,7 +41,7 @@ class ClassTree
         ~ClassTree();
         void printClassInventory();
         void deleteClassNode(std::string title);
-        void addClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats);
+        void addClassNode(std::string title, int credits, std::string department, int courseNum, std::string satisfiesTitle, std::string preReqTitle, int seats);
         void numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats);
         void findClass(std::string title);
         void findClassByNumber(int courseNum);
@@ -64,6 +64,7 @@ class ClassTree
         std::vector<ClassNode*> classCart = {};
         ClassNode* searchByNum(int courseNum);
         ClassNode* search(std::string title);
+        //bool checkPreReq(std::string title);
         ClassNode* treeMinimum(ClassNode *node);
         ClassNode* treeMaximum(ClassNode *node);
         ClassNode *root=NULL;

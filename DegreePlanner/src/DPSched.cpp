@@ -174,6 +174,7 @@ void ClassTree::addToCart(std::string title)
 void ClassTree::takeClass(string title)
 {
     ClassNode *foundClass = search(title);
+
     if (foundClass==NULL)
     {
         cout << "Class not found." << endl;
@@ -186,16 +187,56 @@ void ClassTree::takeClass(string title)
         }
         if (foundClass->seats!=0)
         {
-            foundClass->seats = foundClass->seats-1;
-            addToCart(title);
+            if (foundClass->preReqTitle == "none")
+            {
+                cout<<"prereqs = none"<<endl;
+                foundClass->seats = foundClass->seats-1;
+                addToCart(title);
 
-            cout << "The following class has been added to your transcript: " << endl;
-            cout << "===========" << endl;
-            cout << "Title:" << foundClass->title << endl;
-            cout << "Course ID:" << foundClass->department<<" "<<foundClass->courseNum<< endl;
-            cout << "Credit Hours:" << foundClass->credits << endl;
-            cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
-            cout << "PreRequisite:"<<foundClass->preReqTitle<<endl;
+                cout << "The following class has been added to your schedule: " << endl;
+                cout << "===========" << endl;
+                cout << "Title:" << foundClass->title << endl;
+                cout << "Course ID:" << foundClass->department<<" "<<foundClass->courseNum<< endl;
+                cout << "Credit Hours:" << foundClass->credits << endl;
+                cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
+                cout << "PreRequisite:"<<foundClass->preReqTitle<<endl;
+            }
+            else
+            {
+                if (transcript.size()==0)
+                {
+                    cout<<"Transcript is blank"<<endl;
+                    cout<<"PreRequisites not met"<<endl;
+                    cout<<"You must first complete "<<foundClass->preReqTitle<<endl;
+                }
+                else
+                {
+                    bool found;
+                    for (int i = 0; i<transcript.size(); i++)
+                    {
+                        if (transcript[i]->title == foundClass->preReqTitle)
+                        {
+                            foundClass->seats = foundClass->seats-1;
+                            addToCart(title);
+                            found = 1;
+
+                            cout << "The following class has been added to your schedule: " << endl;
+                            cout << "===========" << endl;
+                            cout << "Title:" << foundClass->title << endl;
+                            cout << "Course ID:" << foundClass->department<<" "<<foundClass->courseNum<< endl;
+                            cout << "Credit Hours:" << foundClass->credits << endl;
+                            cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
+                            cout << "PreRequisite:"<<foundClass->preReqTitle<<endl;
+
+                        }
+                    }
+                    if (!found)
+                    {
+                        cout<<"PreRequisites not met"<<endl;
+                        cout<<"You must first complete "<<foundClass->preReqTitle<<endl;
+                    }
+                }
+            }
         }
     }
 }
@@ -219,7 +260,7 @@ void ClassTree::printTranscript()
 {
     if (transcript.size() == 0)
     {
-        cout<<"You Have 0 Credits, Freshman"<<endl;
+        cout<<"Your Transcript is Blank"<<endl;
     }
     else
     {
@@ -237,12 +278,11 @@ void ClassTree::simSemester()
     {
 
         transcript.push_back(classCart[0]);
-        cout<<classCart[0]->title<<" has been deleted from cart"<<endl;
         classCart.erase(classCart.begin());
     }
     for (int i = 0; i<transcript.size(); i++)
     {
-        cout<<transcript[i]->title<<" has been added to transcript"<<endl;
+        cout<<transcript[i]->title<<" has been completed and added to transcript"<<endl;
     }
 }
 
@@ -252,7 +292,7 @@ void ClassTree::printClassInventory(ClassNode *node)
     {
         printClassInventory(node->leftChild);
     }
-    cout<<node->department<<" "<<node->courseNum<<": "<<node->title<<": "<<node->credits<<" Hrs; "<<node->seats<<" seats remaining"<<endl;
+    cout<<node->department<<" "<<node->courseNum<<": "<<node->title<<": "<<node->credits<<" Hrs; "<<node->seats<<" seats remaining;"<<endl<<"PreReq: "<<node->preReqTitle<<endl;
     if (node->rightChild!=NULL)
     {
         printClassInventory(node->rightChild);
@@ -281,7 +321,6 @@ ClassNode* ClassTree::treeMaximum(ClassNode *node)
     }
     return node;
 }
-
 
 void ClassTree::deleteClassNode(std::string title)
 {
