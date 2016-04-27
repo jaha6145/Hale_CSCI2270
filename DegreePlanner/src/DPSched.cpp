@@ -427,21 +427,25 @@ void ClassTree::DeleteAll(ClassNode *node)
     {
         DeleteAll(node->rightChild);
     }
-    cout<<"Deleting: "<<node->title<<endl;
+    //cout<<"Deleting: "<<node->title<<endl;
     delete node;
 }
 
 void ClassTree::deleteFromCart(std::string title)
 {
+    bool foundAndErased;
     for (int i =0; i < classCart.size(); i++)
     {
         ClassNode *node =classCart[i];
         if (node->title == title)
         {
             classCart.erase(classCart.begin()+i);
+            foundAndErased = 1;
+            cout<<node->title<<" has been removed from schedule"<<endl;
             break;
         }
     }
+    if(!foundAndErased) cout<<"Course not scheduled"<<endl;
 }
 
 ClassTree::~ClassTree()
