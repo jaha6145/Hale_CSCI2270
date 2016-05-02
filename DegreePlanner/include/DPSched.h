@@ -15,12 +15,13 @@ struct ClassNode{
     std::string satisfiesTitle;
     std::string preReqTitle;
     int seats;
+    std::string courseDescription;
     ClassNode *parent;
     ClassNode *leftChild;
     ClassNode *rightChild;
 
     ClassNode(){};
-    ClassNode(std::string in_title, int in_credits, std::string in_department, int in_courseNum, std::string in_satisfiesTitle, std::string in_preReqTitle, int in_seats)
+    ClassNode(std::string in_title, int in_credits, std::string in_department, int in_courseNum, std::string in_satisfiesTitle, std::string in_preReqTitle, int in_seats, std::string in_courseDescription)
     {
         title = in_title;
         credits = in_credits;
@@ -29,6 +30,7 @@ struct ClassNode{
         satisfiesTitle = in_satisfiesTitle;
         preReqTitle = in_preReqTitle;
         seats = in_seats;
+        courseDescription = in_courseDescription;
     }
 
 };
@@ -41,8 +43,8 @@ class ClassTree
         ~ClassTree();
         void printClassInventory();
         void deleteClassNode(std::string title);
-        void addClassNode(std::string title, int credits, std::string department, int courseNum, std::string satisfiesTitle, std::string preReqTitle, int seats);
-        void numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats);
+        void addClassNode(std::string title, int credits, std::string department, int courseNum, std::string satisfiesTitle, std::string preReqTitle, int seats, std::string courseDescription);
+        void numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats, std::string courseDescription);
         void findClass(std::string title);
         void findClassByNumber(int courseNum);
         void takeClass(std::string title);
