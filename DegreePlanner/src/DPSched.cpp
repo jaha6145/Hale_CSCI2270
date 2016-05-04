@@ -8,9 +8,9 @@
 using namespace std;
 
 ClassTree::ClassTree(){}//ctor
-void ClassTree::addClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats)
+void ClassTree::addClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats, std::string courseDescription)
 {
-    ClassNode *classAdd = new ClassNode(title, hours, dept, courseNumber, satisfies, preReqs, seats);
+    ClassNode *classAdd = new ClassNode(title, hours, dept, courseNumber, satisfies, preReqs, seats, courseDescription);
     classAdd->leftChild = NULL;
     classAdd->rightChild = NULL;
     classAdd->parent = NULL;
@@ -43,9 +43,9 @@ void ClassTree::addClassNode(std::string title, int hours, std::string dept, int
             classAdd->parent = parent;
         }
 }
-void ClassTree::numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats)
+void ClassTree::numAddClassNode(std::string title, int hours, std::string dept, int courseNumber, std::string satisfies, std::string preReqs, int seats, std::string courseDescription)
 {
-    ClassNode *classAdd = new ClassNode(title, hours, dept, courseNumber, satisfies, preReqs, seats);
+    ClassNode *classAdd = new ClassNode(title, hours, dept, courseNumber, satisfies, preReqs, seats, courseDescription);
     classAdd->leftChild = NULL;
     classAdd->rightChild = NULL;
     classAdd->parent = NULL;
@@ -110,6 +110,7 @@ void ClassTree::findClass(string title)
     cout << "Credit Hours:" << foundClass->credits << endl;
     cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
     cout<< "PreRequisite:"<<foundClass->preReqTitle<<endl;
+    cout << "Class Description:"<<foundClass->courseDescription<<endl;
     }
     else
     {
@@ -148,6 +149,7 @@ void ClassTree::findClassByNumber(int courseNum)
     cout << "Credit Hours:" << foundClass->credits << endl;
     cout << "Satisfies:" << foundClass->satisfiesTitle << endl;
     cout<< "PreRequisite:"<<foundClass->preReqTitle<<endl;
+    cout << "Class Description:"<<foundClass->courseDescription<<endl;
     }
     else
     {
@@ -341,6 +343,7 @@ void ClassTree::deleteClassNode(std::string title)
             node->courseNum = x->courseNum;
             node->satisfiesTitle = x->satisfiesTitle;
             node->preReqTitle = x->preReqTitle;
+            node->courseDescription = x->courseDescription;
             x->parent->leftChild = NULL;
         }
         else
